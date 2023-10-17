@@ -4,7 +4,6 @@ include_once "templates/header.php";
 ?>
     <div id="main-banner">
         <h1>Faça seu pedido</h1>
-        <h2>Não perca tempo</h2>
     </div>
     <div id="main-container">
         <div class="container">
