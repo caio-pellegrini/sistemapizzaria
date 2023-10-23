@@ -6,11 +6,11 @@ session_start(); /* PHP inicia uma sessão de usuário*/
 $user = "root";
 $pass = "";
 $db = "pizzaria";
-$host = "localhost";
+$host = "127.0.0.1";
 
 try {
     // Código que pode lançar exceções
-    $conn = new PDO("mysql:host={$host} ;dbname={$db}", $user, $pass);
+    $conn = new PDO("mysql:host={$host};dbname={$db}", $user, $pass);
 
     // habilitar os erros
 

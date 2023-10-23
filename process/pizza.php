@@ -15,11 +15,11 @@ if ($method === "GET") {
     $saboresQuery = $conn->query("SELECT * FROM sabor");
     $sabores = $saboresQuery->fetchAll();
 
-    print_r($sabores); exit;
+    //print_r($sabores); exit;
 
 // Criação do pedido
 
-} elseif ($method === "POST") {
+} elseif ($method == "POST") {
     // Lógica de processamento para POST
 }
 

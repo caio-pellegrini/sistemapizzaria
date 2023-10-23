@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -43,8 +44,10 @@ html, body {
     font-size: 50px;
 }
 
-#main-container { /* esta formatação fará com que o rodapé fique sempre no fundo */
-    margin-bottom: 100px; /* afastar um pouco do rodapé */
+#main-container {
+    /* esta formatação fará com que o rodapé fique sempre no fundo */
+    margin-bottom: 100px;
+    /* afastar um pouco do rodapé */
     padding: 50px 0;
     text-align: center;
     min-height: 50%;
@@ -55,7 +58,8 @@ html, body {
     margin-bottom: 30px;
 }
 
-.row { /* a classe row vem do bootstrap negativa*/
+.row {
+    /* a classe row vem do bootstrap negativa*/
     margin: 0;
 }
 
@@ -79,6 +83,28 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/*ALERTA*/
+.alert {
+    border-radius: 0;
+    text-align: center;
+    margin-bottom: 0;
+    font-weight: bold;
+    padding: 20px;
+    font-size: 18px;
+}
+
+.alert.alert-success {
+    border: 2px solid #155724;
+}
+
+.alert.alert-warning {
+    border: 2px solid #856404;
+}
+
+.alert p {
+    margin-bottom: 0;
 }
 
 /* FOOTER */
