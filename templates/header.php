@@ -1,5 +1,26 @@
+<?php
+// Obter a parte da Session do session_start()
+include("process/conn.php");
+
+$msg = "";
+
+// Se a variável de msg da sessão tiver valor
+
+if (isset($_SESSION["msg"])) {
+
+    $msg = $_SESSION["msg"];
+    $status = $_SESSION["status"];
+
+    // Após exibição da msg, limpa as variáveis
+    $_SESSION["msg"] = "";
+    $_SESSION["status"] = "";
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +31,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Multiple Select para CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css" &gt;>
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-lg">
@@ -26,3 +50,9 @@
             </div>
         </nav>
     </header>
+    <!-- As mensagens de alerta irão aparecer quando o sistema enviar -->
+    <?php if($msg != ""): ?>
+        <div class="alert alert-<?= $status ?>">
+            <p><?= $msg ?></p>
+        </div>
+    <?php endif; ?>
